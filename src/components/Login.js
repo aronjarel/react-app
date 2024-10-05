@@ -1,22 +1,31 @@
 // src/components/Login.js
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Simulate login process (you could replace this with an API call)
-    if (email === 'test@example.com' && password === 'password') {
-      // Redirect to Dashboard on successful login
+    try {
+      const response = await axios.post('http://localhost:3000/api/auth/login', {
+        email,
+        password,
+      });
+
+      // Store the JWT token in localStorage
+      localStorage.setItem('token', response.data.token);
+
+      // Redirect to the dashboard after successful login
       navigate('/dashboard');
-    } else {
-      alert('Invalid email or password');
+    } catch (err) {
+      setError('Invalid email or password. Please try again.');
     }
   };
 

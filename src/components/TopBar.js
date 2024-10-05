@@ -2,6 +2,12 @@
 import React from 'react';
 import './TopBar.css';
 
+const handleLogout = () => {
+  localStorage.removeItem('token');
+  navigate('/login');
+};
+
+
 const TopBar = () => {
   return (
     <header className="topbar">
@@ -18,6 +24,7 @@ const TopBar = () => {
         </div>
       </div>
       <div className="topbar-right">
+      <a onClick={handleLogout} href="" className="add-project-btn">Logout</a>
         <a href="/add-project" className="add-project-btn">Add Project</a>
         <div className="profile-section">
           <img src="/path/to/profile-pic.jpg" alt="Profile" className="profile-pic" />
