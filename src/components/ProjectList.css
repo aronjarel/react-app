@@ -1,0 +1,18 @@
+/* ProjectList.css */
+.project-list {
+  margin: 20px 0;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f7f8fc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #0074d9;
+  text-decoration: none;
+}

@@ -1,0 +1,41 @@
+/* TopBar.css */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.topbar-info {
+  display: flex;
+}
+
+.project-details {
+  margin-right: 20px;
+}
+
+.project-summary {
+  font-weight: bold;
+}
+
+.add-project-btn {
+  background-color: #0074d9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

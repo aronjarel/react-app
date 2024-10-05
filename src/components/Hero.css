@@ -1,0 +1,47 @@
+/* Hero.css */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #1a1a3e;
+  color: white;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  color: #ffcc00;
+}
+
+.search-bar {
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 15px;
+  width: 300px;
+  border-radius: 30px;
+  border: none;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #ffcc00;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 350px;
+}
