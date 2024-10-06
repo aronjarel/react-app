@@ -35,6 +35,7 @@ const Login = () => {
         <h1>Learning Management Systems Login</h1>
       </div>
       <div className="login-right">
+        <form onSubmit={handleLogin}>
         <div className="login-box">
           <div className="input-group">
             <span className="icon">&#x1F464;</span> {/* User Icon */}
@@ -54,10 +55,11 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="login-btn" onClick={handleLogin}>
+          <button className="login-btn" type="submit">
             Login
           </button>
         </div>
+        </form>
       </div>
     </div>
   );
