@@ -11,7 +11,7 @@ const CreateCourse = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:3000/api/courses', {
+      await axios.post(`${REACT_APP_API_URL}/courses`, {
         name,
         description,
       }, {
