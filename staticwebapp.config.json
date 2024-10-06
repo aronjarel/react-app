@@ -1,7 +1,15 @@
 {
   "routes": [
     {
-      "route": "/*",
+      "route": "/static/*",      
+      "serve": "/static"
+    },
+    {
+      "route": "/favicon.ico",   
+      "serve": "/favicon.ico"
+    },
+    {
+      "route": "/*",             
       "rewrite": "/index.html"
     }
   ]
