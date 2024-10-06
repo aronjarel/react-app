@@ -12,6 +12,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log("form Submitted");
 
     try {
       const response = await axios.post(`${REACT_APP_API_URL}/auth/login`, {
@@ -19,12 +20,14 @@ const Login = () => {
         password,
       });
 
+      console.log("API response: ", response.data);
       // Store the JWT token in localStorage
       localStorage.setItem('token', response.data.token);
 
       // Redirect to the dashboard after successful login
       navigate('/dashboard');
     } catch (err) {
+      console.log('error logging in...');
       setError('Invalid email or password. Please try again.');
     }
   };
