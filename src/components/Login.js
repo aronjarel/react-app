@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +16,7 @@ const Login = () => {
     console.log("form Submitted");
 
     try {
-      const response = await axios.post(`${REACT_APP_API_URL}/auth/login`, {
+      const response = await axios.post(`http://nodeapi-agf8g8e9gyd2b4g9.canadacentral-01.azurewebsites.net/api/auth/login`, {
         email,
         password,
       });
@@ -27,7 +28,7 @@ const Login = () => {
       // Redirect to the dashboard after successful login
       navigate('/dashboard');
     } catch (err) {
-      console.log('error logging in...');
+      console.log('error logging in...' + err);
       setError('Invalid email or password. Please try again.');
     }
   };

@@ -1,15 +1,18 @@
 /* Navbar.css */
 .navbar {
+  background-color: #007bff;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #1a1a3e;
+  font-family: 'Arial', sans-serif;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .logo img {
@@ -17,18 +20,37 @@
   margin-right: 10px;
 }
 
-.nav-links {
-  display: flex;
+.navbar-links {
   list-style-type: none;
+  display: flex;
+  gap: 15px;
 }
 
-.nav-links li {
-  margin: 0 15px;
+.navbar-links li {
+  margin: 0;
 }
 
-.nav-links a {
-  color: #fff;
+.navbar-links a {
+  color: white;
   text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffcc00;
+}
+
+.active-link {
+  color: #ffcc00;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: block;
+    text-align: right;
+  }
 }
 
 .auth-buttons .login-btn,
