@@ -16,7 +16,7 @@ const Login = () => {
     console.log("form Submitted");
 
     try {
-      const response = await axios.post(`http://nodeapi-agf8g8e9gyd2b4g9.canadacentral-01.azurewebsites.net/api/auth/login`, {
+      const response = await axios.post(`https://nodeapi-agf8g8e9gyd2b4g9.canadacentral-01.azurewebsites.net/api/auth/login`, {
         email,
         password,
       });
