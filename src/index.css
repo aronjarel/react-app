@@ -1,4 +1,41 @@
+/* index.css */
+:root {
+  --primary-yellow: #FFC107;
+  --dark-gray: #333333;
+  --light-gray: #F5F5F5;
+  --accent-blue: #007BFF;
+  --neutral-white: #FFFFFF;
+}
+
+/* index.css */
 body {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  font-family: 'Roboto', sans-serif; /* Assuming you're using Roboto */
   margin: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* index.css or a separate Button.css */
+button.primary {
+  background-color: var(--primary-yellow);
+  color: var(--dark-gray);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.primary:hover {
+  background-color: #e0a800; /* Darker shade of yellow for hover effect */
+}
+
+button.secondary {
+  background-color: var(--accent-blue);
+  color: var(--neutral-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }

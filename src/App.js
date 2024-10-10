@@ -9,6 +9,9 @@ import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import CreateCourse from './components/CreateCourse';
 import CourseList from './components/CourseList';
+import AttendanceDashboard from './components/AttendanceDashboard';
+import AddAttendance from './components/AddAttendance';
+import EditAttendance from './components/EditAttendance';
 
 
 function App() {
@@ -35,6 +38,9 @@ function App() {
         <Route path="/courses" element={<CourseList />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/attendance" element={<AttendanceDashboard />} />
+          <Route path="/attendance/add" element={<AddAttendance />} />
+          <Route path="/attendance/edit/:id" element={<EditAttendance />} />
       </Routes>
     </Router>
   );

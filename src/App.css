@@ -1,3 +1,18 @@
+/* index.css or App.css */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Optional: Customize font weight and size for different elements */
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
 .App {
   text-align: center;
 }

@@ -5,5 +5,45 @@
 
 .main-content {
   flex: 1;
+  flex-direction: column;
   padding: 20px;
+  background-color: #edf0f3;
 }
+
+.dashboard-sections {
+  display: flex;
+  gap: 20px;
+}
+
+.attendance-overview {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 300px;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.dashboard-layout.collapsed {
+  grid-template-columns: 60px 1fr 300px; /* Adjust grid when sidebar is collapsed */
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.right-panel {
+  background-color: #fff;
+  padding: 20px;
+  /*border-radius: 8px;*/
+  height: 100%;
+}
+

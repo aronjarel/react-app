@@ -19,11 +19,17 @@ const Navbar = ({role}) => {
           <li><a href="/about">About</a></li>
           <li><a href="/courses">Courses</a></li>
           <li><a href="/contact">Contact</a></li>
+          
           </>
         )}
 
         {role === 'teacher' && (
           <>
+            <li>
+          <NavLink to="/attendance" activeClassName="active-link">
+            Attendance
+          </NavLink>
+        </li>
             <li>
               <NavLink to="/create-course" activeClassName="active-link">
                 Create Course
