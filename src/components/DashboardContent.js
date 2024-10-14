@@ -28,7 +28,7 @@ const DashboardContent = () => {
   const fetchDashboardData = async (userRole) => {
     try {
       const  response = await axios.get(`https://nodeapi-agf8g8e9gyd2b4g9.canadacentral-01.azurewebsites.net/api/dashboard/${userRole}`, {
-        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+        headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` },
       });
       setMessage(response.data.message);
     } catch (error) {

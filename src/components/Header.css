@@ -1,5 +1,4 @@
 .header {
-    background-color: #f0f4f8;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -7,14 +6,12 @@
   }
 
   .header {
-    background-color: var(--primary-yellow);
+    /*background-color: var(--primary-yellow);*/
     color: var(--neutral-white);
-    padding: 15px;
-    border-bottom: 1px solid var(--dark-gray);
   }
   
   .welcome-message {
-    background-color: #e0e7ff;
+    background-color: #ffcc00;
     padding: 15px;
     border-radius: 8px;
     position: relative;

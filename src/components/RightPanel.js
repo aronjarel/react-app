@@ -28,13 +28,13 @@ const RightPanel = () => {
   return (
     <div className="right-panel">
       <div className="user-info">
-        <img src="https://via.placeholder.com/80" alt="User" className="user-image" />
-        <h4 className="user-name">Patrick Cruz</h4>
+        <i className="fas fa-user"></i>
+        <h6 className="user-name">Patrick Cruz</h6>
         <p className="user-role">Student</p>
         <hr className="divider" />
       </div>
       <div className="upcoming-challenges">
-        <h3>Upcoming Challenges</h3>
+        <h4>Upcoming Challenges</h4>
         <ul>
           {challenges.map((challenge, index) => (
             <li key={index} className="challenge-item">

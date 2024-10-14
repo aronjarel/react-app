@@ -23,7 +23,7 @@ const Login = () => {
 
       console.log("API response: ", response.data);
       // Store the JWT token in localStorage
-      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('authToken', response.data.token);
 
       // Redirect to the dashboard after successful login
       navigate('/dashboard');

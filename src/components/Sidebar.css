@@ -22,15 +22,16 @@
   background: none;
   border: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 10px;
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: -15px; /* Position it outside the sidebar */
   background-color: #2d3748;
-  border-radius: 50%;
   width: 30px;
   height: 30px;
+}
+
+ul.sidebar-menu {
+  margin: 0;
+  padding: 4px;
 }
 
 .sidebar-header {

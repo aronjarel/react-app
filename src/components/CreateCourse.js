@@ -1,17 +1,21 @@
 // src/components/CreateCourse.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import Layout from './Layout';
 
 const CreateCourse = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [message, setMessage] = useState('');
 
+  const apiLink = `https://nodeapi-agf8g8e9gyd2b4g9.canadacentral-01.azurewebsites.net/api/courses/`;
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const token = localStorage.getItem('token');
-      await axios.post(`${REACT_APP_API_URL}/courses`, {
+      const token = localStorage.getItem('authToken');
+      await axios.post(apiLink, {
         name,
         description,
       }, {
@@ -26,6 +30,7 @@ const CreateCourse = () => {
   };
 
   return (
+    <Layout>
     <div>
       <h2>Create a New Course</h2>
       {message && <p>{message}</p>}
@@ -41,6 +46,7 @@ const CreateCourse = () => {
         <button type="submit">Create Course</button>
       </form>
     </div>
+    </Layout>
   );
 };
 

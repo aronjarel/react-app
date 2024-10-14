@@ -26,12 +26,12 @@ const Navbar = ({role}) => {
         {role === 'teacher' && (
           <>
             <li>
-          <NavLink to="/attendance" activeClassName="active-link">
+          <NavLink to="/attendance" className={nav => (nav.isActive ? "active-link" : "")}>
             Attendance
           </NavLink>
         </li>
             <li>
-              <NavLink to="/create-course" activeClassName="active-link">
+              <NavLink to="/create-course" className={nav => (nav.isActive ? "active-link" : "")}>
                 Create Course
               </NavLink>
             </li>
@@ -41,7 +41,7 @@ const Navbar = ({role}) => {
         {role === 'admin' && (
           <>
             <li>
-              <NavLink to="/admin/users" activeClassName="active-link">
+              <NavLink to="/admin/users" className={nav => (nav.isActive ? "active-link" : "")}>
                 Manage Users
               </NavLink>
             </li>
@@ -49,7 +49,7 @@ const Navbar = ({role}) => {
         )}
 
         <li>
-          <NavLink to="/login" activeClassName="active-link">
+          <NavLink to="/login" className={nav => (nav.isActive ? "active-link" : "")}>
             Logout
           </NavLink>
         </li>

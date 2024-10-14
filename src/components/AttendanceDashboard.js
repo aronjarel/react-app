@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+import Layout from './Layout';
+
 const AttendanceDashboard = () => {
   const [attendanceRecords, setAttendanceRecords] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
@@ -27,6 +29,7 @@ const AttendanceDashboard = () => {
   }
 
   return (
+    <Layout>
     <div>
       <h2>Attendance Dashboard</h2>
       <Link to="/attendance/add">Add Attendance</Link>
@@ -57,6 +60,7 @@ const AttendanceDashboard = () => {
         </tbody>
       </table>
     </div>
+    </Layout>
   );
 };
 

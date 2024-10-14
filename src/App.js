@@ -8,14 +8,15 @@ import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import CreateCourse from './components/CreateCourse';
-import CourseList from './components/CourseList';
+import Courses from './components/Courses';
 import AttendanceDashboard from './components/AttendanceDashboard';
 import AddAttendance from './components/AddAttendance';
 import EditAttendance from './components/EditAttendance';
-
+import GlobalStateProvider from './components/GlobalStateProvider';
 
 function App() {
   return (
+    <GlobalStateProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Main />} />
@@ -35,7 +36,7 @@ function App() {
           }
         />
         {/* Public route for viewing courses */}
-        <Route path="/courses" element={<CourseList />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/attendance" element={<AttendanceDashboard />} />
@@ -43,6 +44,7 @@ function App() {
           <Route path="/attendance/edit/:id" element={<EditAttendance />} />
       </Routes>
     </Router>
+    </GlobalStateProvider>
   );
 }
 

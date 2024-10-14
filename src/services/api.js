@@ -9,7 +9,7 @@ const apiClient = axios.create({
 
 // For authenticated requests, you can attach the token to headers
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('authToken');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`; // Attach JWT token
   }

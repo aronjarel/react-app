@@ -3,7 +3,7 @@ import React from 'react';
 import './TopBar.css';
 
 const handleLogout = () => {
-  localStorage.removeItem('token');
+  localStorage.removeItem('authToken');
   navigate('/login');
 };
 
