@@ -1,8 +1,8 @@
-// src/components/Main.js
+// src/pages/Main.js
 import React from 'react';
-import Hero from './Hero';
-import Navbar from './Navbar';
-import LogoSection from './LogoSection';
+import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
+import LogoSection from '../components/LogoSection';
 
 
 const Main = () => {

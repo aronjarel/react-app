@@ -1,13 +1,13 @@
 // src/components/CourseList.js
 import React, { useEffect, useContext } from 'react';
-import { GlobalStateContext } from './GlobalStateProvider';
+import { GlobalStateContext } from '../components/GlobalStateProvider';
 
 import axios from 'axios';
 import {  Link } from 'react-router-dom';
-import EditableTable from './EditableTable';
+import EditableTable from '../components/EditableTable';
 
 
-import Layout from './Layout';
+import Layout from '../components/Layout';
 
 const Courses = () => {
   const { courses, setCourses, loadCourses, loading } = useContext(GlobalStateContext);

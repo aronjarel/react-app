@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.jpg'; // Import the logo image
 
 import './Sidebar.css';
-import logout from './logout';
+import logout from '../pages/logout';
 
 const Sidebar = ({ isCollapsed, onToggle }) => {
   return (

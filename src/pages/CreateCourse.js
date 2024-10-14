@@ -1,7 +1,7 @@
 // src/components/CreateCourse.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import Layout from './Layout';
+import Layout from '../components/Layout';
 
 const CreateCourse = () => {
   const [name, setName] = useState('');

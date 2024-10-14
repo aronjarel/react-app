@@ -12,13 +12,16 @@ const Register = () => {
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
 
+  const apiLink = `https://nodeapi-agf8g8e9gyd2b4g9.canadacentral-01.azurewebsites.net/api/register`;
+
+
   const handleRegister = async (e) => {
     e.preventDefault();
     setError('');
     setSuccess('');
     
     try {
-      const response = await axios.post(`${REACT_APP_API_URL}/auth/register`, {
+      const response = await axios.post(apiLink, {
         email,
         password,
         role,

@@ -3,14 +3,14 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
-import Layout from './Layout';
-import Sidebar from './Sidebar';
-import Header from './Header';
+import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
 import DashboardContent from './DashboardContent';
-import RightPanel from './RightPanel';
-import TopBar from './TopBar';
-import LeadStats from './LeadStats';
-import ProjectList from './ProjectList';
+import RightPanel from '../components/RightPanel';
+import TopBar from '../components/TopBar';
+import LeadStats from '../components/LeadStats';
+import ProjectList from '../components/ProjectList';
 import AttendanceOverview from './AttendanceOverview'; // Import AttendanceOverview
 
 import './Dashboard.css';

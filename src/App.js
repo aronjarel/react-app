@@ -2,17 +2,20 @@
 import React from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from './components/Main';
-import Login from './components/Login';
-import Register from './components/Register';
-import Dashboard from './components/Dashboard';
+import Main from './pages/Main';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-import CreateCourse from './components/CreateCourse';
-import Courses from './components/Courses';
-import AttendanceDashboard from './components/AttendanceDashboard';
-import AddAttendance from './components/AddAttendance';
-import EditAttendance from './components/EditAttendance';
+import CreateCourse from './pages/CreateCourse';
+import Courses from './pages/Courses';
+import AttendanceDashboard from './pages/AttendanceDashboard';
+import AddAttendance from './pages/AddAttendance';
+import EditAttendance from './pages/EditAttendance';
 import GlobalStateProvider from './components/GlobalStateProvider';
+import Unauthorized from './pages/Unauthorized';
+import CreateSchedule from './pages/CreateSchedule';
+import ViewSchedules from './pages/ViewSchedules';
 
 function App() {
   return (
@@ -21,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/dashboard" element={
-          <ProtectedRoute>
+          <ProtectedRoute allowedRoles={['Admin', 'Teacher']}>
             <Dashboard />
           </ProtectedRoute>
           } 
@@ -30,7 +33,7 @@ function App() {
         <Route
           path="/create-course"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute allowedRoles={['Teacher']}>
               <CreateCourse />
             </ProtectedRoute>
           }
@@ -40,8 +43,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/attendance" element={<AttendanceDashboard />} />
-          <Route path="/attendance/add" element={<AddAttendance />} />
-          <Route path="/attendance/edit/:id" element={<EditAttendance />} />
+        <Route path="/attendance/add" element={<AddAttendance />} />
+        <Route path="/attendance/edit/:id" element={<EditAttendance />} />
+        <Route path="/create-schedule" element={<CreateSchedule />} />
+        <Route path="/view-schedules" element={<ViewSchedules />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
       </Routes>
     </Router>
     </GlobalStateProvider>
