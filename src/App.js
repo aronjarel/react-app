@@ -15,7 +15,9 @@ import EditAttendance from './pages/EditAttendance';
 import GlobalStateProvider from './components/GlobalStateProvider';
 import Unauthorized from './pages/Unauthorized';
 import CreateSchedule from './pages/CreateSchedule';
-import ViewSchedules from './pages/ViewSchedules';
+import Schedules from './pages/Schedules';
+
+import ScheduleCalendar from './components/ScheduleCalendar';
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
           }
         />
         {/* Public route for viewing courses */}
+        <Route path="/calendar" element={<ScheduleCalendar />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -46,7 +49,7 @@ function App() {
         <Route path="/attendance/add" element={<AddAttendance />} />
         <Route path="/attendance/edit/:id" element={<EditAttendance />} />
         <Route path="/create-schedule" element={<CreateSchedule />} />
-        <Route path="/view-schedules" element={<ViewSchedules />} />
+        <Route path="/schedules" element={<Schedules />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
       </Routes>
     </Router>

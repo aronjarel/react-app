@@ -1,4 +1,4 @@
-import React, { createContext, useState, useCallback } from 'react';
+import React, { createContext, useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
 
 // Create the context
@@ -6,6 +6,7 @@ export const GlobalStateContext = createContext();
 
 const GlobalStateProvider = ({ children }) => {
   const [courses, setCourses] = useState([]);
+  const [classes, setClasses] = useState([]); 
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState({ courses: false, users: false }); // Track loaded state
@@ -27,6 +28,22 @@ const GlobalStateProvider = ({ children }) => {
     }
     setLoading((prev) => ({ ...prev, courses: false }));
   }, []); //no dependencies needed
+
+  const fetchClasses = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get(apiLink);
+      setClasses(response.data);
+    } catch (error) {
+      console.error('Error fetching classes:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchClasses();
+  }, []);
 
   // Example function to load users (API call)
   const loadUsers = async () => {
@@ -53,6 +70,8 @@ const GlobalStateProvider = ({ children }) => {
         courses,
         setCourses,
         loadCourses,
+        classes,
+        fetchClasses,
         users,
         setUsers,
         loadUsers,
